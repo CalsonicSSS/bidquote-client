@@ -56,7 +56,7 @@ export default async function BuyerDashboard() {
           </div>
 
           <div className='mt-8 p-4 bg-blue-50 rounded-lg'>
-            <p className='font-inter text-gray-700'>🚧 This dashboard is under development. Soon you'll be able to post jobs, review bids, and manage your projects!</p>
+            <p className='font-inter text-gray-700'>🚧 This dashboard is under development. Soon you will be able to post jobs, review bids, and manage your projects!</p>
           </div>
         </div>
       </main>

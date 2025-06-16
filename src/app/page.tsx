@@ -56,8 +56,8 @@ export default function HomePage() {
               ))}
             </div>
             <blockquote className='font-inter text-xl md:text-2xl text-gray-700 mb-6 italic'>
-              "Bidquote made it so easy to setup my service on the platform and and expose my business to new customers. The bidding process is straightforward and I love how I can
-              compare multiple contractors quickly."
+              &apos;Bidquote made it so easy to setup my service on the platform and and expose my business to new customers. The bidding process is straightforward and I love how
+              I can compare multiple contractors quickly.&apos;
             </blockquote>
             <cite className='font-roboto text-gray-600'>— Xuhan S., PVC Contracting Inc.</cite>
           </div>
@@ -112,8 +112,8 @@ export default function HomePage() {
                 <span className='font-inter text-lg text-green-600'>Background checked & verified</span>
               </div>
               <p className='font-inter text-gray-600 mb-8 text-lg'>
-                All contractors on Bidquote are licensed, insured, and background-checked. If you're not satisfied with the work, we'll make it right with our satisfaction
-                guarantee.
+                All contractors on Bidquote are licensed, insured, and background-checked. If you&apos;re not satisfied with the work, we&apos;ll make it right with our
+                satisfaction guarantee.
               </p>
             </div>
 
