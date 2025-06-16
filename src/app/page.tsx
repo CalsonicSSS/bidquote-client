@@ -1,30 +1,15 @@
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import Link from 'next/link';
 import { Star, Clock, CheckCircle } from 'lucide-react';
 import Image from 'next/image';
-import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import { DynamicIcon } from 'lucide-react/dynamic';
+import { UserAuthConditionalButtons } from '@/components/UserAuthConditionalButtons';
+import { Header } from '@/components/HomeHeader';
 
 export default function HomePage() {
   return (
     <main className='min-h-screen'>
-      {/* Header Section */}
-      <header className='sticky top-0 z-50 bg-theme-blue text-white'>
-        <div className='container mx-auto px-5 h-20 flex justify-between items-center'>
-          <div className='font-roboto text-2xl font-bold'>Bidquote</div>
-          <div className='flex items-center gap-4'>
-            <SignedOut>
-              <SignInButton mode='modal'>
-                <button className='font-roboto bg-gray-800 text-white px-5 py-2 rounded-lg hover:bg-gray-700 transition-colors'>Login</button>
-              </SignInButton>
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-          </div>
-        </div>
-      </header>
+      {/* Header Component */}
+      <Header />
 
       {/* Hero Section */}
       <section className='relative h-[600px] bg-gradient-to-r from-blue-900 to-blue-700 flex items-center'>
@@ -34,16 +19,9 @@ export default function HomePage() {
           <div className='max-w-3xl'>
             <h1 className='font-inter text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'>Home maintenance with competitive bidding</h1>
             <p className='font-inter text-xl text-gray-200 mb-8'>Post your job and get multiple bids from qualified contractors with us.</p>
-            <div className='flex flex-col sm:flex-row gap-4'>
-              <Link href='/sign-up'>
-                <Button className='font-roboto w-full sm:w-auto px-8 py-4 text-lg bg-theme-blue hover:bg-blue-600 text-white'>Post a Job</Button>
-              </Link>
-              <Link href='/sign-up'>
-                <Button variant='outline' className='font-roboto w-full sm:w-auto px-8 py-4 text-lg border-white text-white hover:bg-white hover:text-blue-700 bg-transparent'>
-                  Find Work
-                </Button>
-              </Link>
-            </div>
+
+            {/* Conditional buttons based on auth status */}
+            <UserAuthConditionalButtons />
           </div>
         </div>
       </section>
@@ -119,12 +97,8 @@ export default function HomePage() {
                 <Clock className='h-6 w-6 text-blue-600' />
                 <span className='font-inter text-lg text-blue-600'>Average 10 minute response time</span>
               </div>
-              <p className='font-inter text-gray-600 mb-8 text-lg'>
-                Your job posting instantly goes out to our network of contractors who are nearby, available, and ready to bid on your project.
-              </p>
-              <Link href='/sign-up'>
-                <Button className='font-roboto px-8 py-4 text-lg bg-blue-600 hover:bg-blue-700 text-white rounded-full'>Get multiple bids</Button>
-              </Link>
+              <p className='font-inter text-gray-600 mb-8 text-lg'>Your job posting instantly goes out to our network of contractors. Post your anytime, bid on jobs anytime!</p>
+              {/* <UserAuthConditionalButtons /> */}
             </div>
           </div>
 
