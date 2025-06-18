@@ -15,7 +15,7 @@ const inter = Inter({
   subsets: ['latin'],
   style: ['normal', 'italic'],
   weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-nunito',
+  variable: '--font-inter',
   display: 'swap',
 });
 

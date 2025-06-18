@@ -1,0 +1,13 @@
+# locally package clean up and Reinstall
+
+#1. Remove node_modules folder in Windows PowerShell:
+Remove-Item -Path .\node_modules -Recurse -Force
+
+#2. Clear pnpm store cache:
+pnpm store prune
+
+#3. Reinstall dependencies
+pnpm install
+
+#4. Then try running your project again
+pnpm dev
